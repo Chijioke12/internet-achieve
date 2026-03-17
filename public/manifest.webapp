@@ -1,0 +1,28 @@
+{
+  "name": "Archive Search",
+  "description": "Search and download from the Internet Archive",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icon.svg",
+    "112": "/icon.svg",
+    "128": "/icon.svg"
+  },
+  "developer": {
+    "name": "KaiOS Developer",
+    "url": "https://archive.org"
+  },
+  "default_locale": "en-US",
+  "type": "web",
+  "permissions": {
+    "systemXHR": {
+      "description": "Required to fetch data from Internet Archive API"
+    }
+  },
+  "locales": {
+    "en-US": {
+      "name": "Archive Search",
+      "subtitle": "Internet Archive Client",
+      "description": "Search and download from the Internet Archive"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "short_name": "ArchiveSearch",
+  "name": "Internet Archive Search",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ff4e00",
+  "background_color": "#ffffff"
+}
