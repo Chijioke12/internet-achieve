@@ -6,19 +6,15 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "build:omnisd": "npm run build && node scripts/build-omnisd.js",
     "preview": "vite preview",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist build",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
-    "@vitejs/plugin-react": "^5.0.4",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
-    "lucide-react": "^0.546.0",
-    "motion": "^12.23.24",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "regenerator-runtime": "^0.14.1",
     "vite": "^6.2.0"
   },
@@ -26,6 +22,7 @@
     "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-legacy": "^6.1.1",
+    "adm-zip": "^0.5.16",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.8",
     "terser": "^5.46.1",
