@@ -20,7 +20,7 @@ export function showInterstitial(onAdClosedOrFailed: () => void) {
       publisher: PUBLISHER_ID,
       app: 'Internet Archive Search',
       slot: 'fullscreen',
-      test: 1, // SET THIS TO 0 BEFORE SUBMITTING TO KAISTORE FOR PRODUCTION
+      test: 0, // Production mode (set to 1 temporarily if you need to test later)
       onerror: (err: any) => {
         console.error('KaiAds error:', err);
         onAdClosedOrFailed();
