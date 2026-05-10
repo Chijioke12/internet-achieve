@@ -1,4 +1,5 @@
 import './index.css';
+import { showInterstitial } from './ads';
 
 // --- Types ---
 interface ArchiveFile {
@@ -153,7 +154,10 @@ function handleKeyDown(e: KeyboardEvent) {
       } else if (state.view === 'files' && state.selectedItem?.files) {
         const validFiles = state.selectedItem.files.filter(f => !f.name.startsWith('__'));
         if (validFiles[state.fileIndex]) {
-          window.open(`https://archive.org/download/${state.selectedItem.identifier}/${validFiles[state.fileIndex].name}`, '_blank');
+          // Show ad before downloading (helps monetization)
+          showInterstitial(() => {
+            window.open(`https://archive.org/download/${state.selectedItem.identifier}/${validFiles[state.fileIndex].name}`, '_blank');
+          });
         }
       }
       break;
@@ -170,9 +174,12 @@ function handleKeyDown(e: KeyboardEvent) {
         e.preventDefault();
         render();
       } else if (state.view === 'list') {
-        state.view = 'search';
-        e.preventDefault();
-        render();
+        // Show an ad when exiting list back to search
+        showInterstitial(() => {
+          state.view = 'search';
+          e.preventDefault();
+          render();
+        });
       } else if (state.view === 'filter') {
         state.view = 'search';
         e.preventDefault();
