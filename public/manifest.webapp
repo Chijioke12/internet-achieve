@@ -1,11 +1,16 @@
 {
+  "version": "1.0.0",
   "name": "Archive Search",
-  "description": "Search and download from the Internet Archive",
+  "description": "Discover, search, and download public domain books, music, videos, and software directly from the Internet Archive.",
   "launch_path": "/index.html",
+  "categories": [
+    "education",
+    "utilities"
+  ],
   "icons": {
-    "56": "/icon.svg",
-    "112": "/icon.svg",
-    "128": "/icon.svg"
+    "56": "/icon-56.png",
+    "112": "/icon-112.png",
+    "128": "/icon-128.png"
   },
   "developer": {
     "name": "KaiOS Developer",
@@ -16,6 +21,11 @@
   "dependencies": {
     "ads-sdk": "1.5.8"
   },
+  "b2g_features": {
+    "dependencies": {
+      "ads-sdk": "1.5.8"
+    }
+  },
   "permissions": {
     "systemXHR": {
       "description": "Required to fetch data from Internet Archive API"
@@ -25,7 +35,7 @@
     "en-US": {
       "name": "Archive Search",
       "subtitle": "Internet Archive Client",
-      "description": "Search and download from the Internet Archive"
+      "description": "Discover, search, and download public domain books, music, videos, and software directly from the Internet Archive."
     }
   }
 }
