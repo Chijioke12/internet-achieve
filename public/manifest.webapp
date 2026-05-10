@@ -18,6 +18,7 @@
   },
   "default_locale": "en-US",
   "type": "web",
+  "theme_color": "#4355B9",
   "dependencies": {
     "ads-sdk": "1.5.8"
   },
